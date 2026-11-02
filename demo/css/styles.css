@@ -157,7 +157,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .password-toggle:hover { color: var(--primary); }
 fieldset.field { border: 0; padding: 0; margin: 0; min-width: 0; }
 .check { display: inline-flex; align-items: center; gap: var(--s2); font-weight: 600; font-size: 0.9rem; cursor: pointer; }
-.check input { width: 18px; height: 18px; accent-color: var(--primary); }
+.check input, .field .check input { width: 18px; height: 18px; min-height: 0; padding: 0; flex: none; accent-color: var(--primary); }
 
 .form-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr)); gap: var(--s4); align-items: start; }
 .form-grid > .field:not(.span-all) > span:first-child {
@@ -347,6 +347,11 @@ fieldset.field { border: 0; padding: 0; margin: 0; min-width: 0; }
 .search .icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--muted); }
 .search input { padding-left: 38px; min-height: 38px; width: 220px; max-width: 100%; }
 .table-wrap { width: 100%; overflow: auto; border-radius: var(--r-md); box-shadow: var(--inset-sm); max-height: 70vh; -webkit-overflow-scrolling: touch; }
+.import-tabla { max-height: 320px; }
+.import-tabla table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.import-tabla th, .import-tabla td { padding: 6px 10px; text-align: left; border-bottom: 1px solid var(--line); vertical-align: top; }
+.import-tabla th { position: sticky; top: 0; background: var(--surface, #fff); }
+.import-steps .form-section > h3 { display: flex; align-items: center; gap: var(--s2); }
 table.table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.88rem; }
 .table th, .table td { padding: 10px 14px; text-align: center; vertical-align: middle; border-bottom: 1px solid var(--line); white-space: nowrap; }
 .table td.wrap { white-space: normal; min-width: 220px; max-width: 420px; text-align: left; }
@@ -383,8 +388,18 @@ table.table { width: 100%; border-collapse: separate; border-spacing: 0; font-si
 .profile-section > h3 { display: flex; align-items: center; justify-content: center; gap: var(--s2); font-size: 0.9rem; color: var(--primary); }
 .profile-section > h3 .icon { color: var(--secondary); }
 .farm-hero { align-items: center; text-align: center; }
+.farm-head { display: flex; flex-direction: column; align-items: center; gap: var(--s3); width: 100%; }
+.farm-title { display: flex; flex-direction: column; align-items: center; gap: var(--s2); }
+.farm-title h2 { margin: 0; }
 .farm-hero .meta { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--s2) var(--s4); color: var(--muted); font-size: 0.9rem; }
 .farm-hero .meta span { display: inline-flex; align-items: center; gap: 6px; }
+@media (min-width: 1024px) {
+    .farm-hero { align-items: stretch; text-align: left; }
+    .farm-head { flex-direction: row; }
+    .farm-title { flex-direction: row; gap: var(--s3); }
+    .farm-actions { margin-left: auto; }
+    .farm-hero .meta { justify-content: flex-start; }
+}
 .empty-line { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--s3); text-align: center; padding: var(--s5) var(--s3); color: var(--muted); }
 .empty-line .icon-lg { color: var(--slate, #6B84A3); }
 
@@ -631,3 +646,11 @@ details.ficha[open] > summary .icon:last-child { transform: rotate(180deg); }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+
+.check-plan { width: 18px; height: 18px; accent-color: var(--primary); }
+.input-precio { width: 110px; min-height: 38px; padding: 6px 10px; text-align: right; }
+
+
+.progreso { height: 10px; border-radius: 999px; background: var(--info-bg); overflow: hidden; margin: var(--s2) auto 0; max-width: 520px; }
+.progreso > span { display: block; height: 100%; background: var(--primary); transition: width .3s ease; }

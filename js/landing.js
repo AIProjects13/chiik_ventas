@@ -4,7 +4,7 @@
   const WA = '50258253416';
   // Idiomas con juego de capturas propio; los demás usan las capturas en español.
   const SHOT_LANGS = ['es'];
-  const SHOTS_V = '202610290';   // súbelo al regenerar las capturas
+  const SHOTS_V = '202611030';   // súbelo al regenerar las capturas
 
   // ── Textos en inglés (el español está escrito en el HTML)
   const EN = {
@@ -37,7 +37,7 @@
     'f4.b1': 'Comfortable, altered, marked stress or critical', 'f4.b2': 'Reading history with date and time', 'f4.b3': 'The day’s maximum goes into the house record',
     'f5.tag': 'Dashboard', 'f5.title': 'All production, at a glance.',
     'f5.text': 'Indicators, gauges and charts per production line, filtered by farm, section, house and dates, by day, week or month. Compare farms or houses, sort every table from A to Z and download the data or the charts.',
-    'f5.b1': 'Comparison by farm or by house', 'f5.b2': 'Actual against table in every chart', 'f5.b3': 'Tables as CSV and charts as images',
+    'f5.b1': 'Comparison by farm, by house or between flocks', 'f5.b2': 'Actual against table in every chart', 'f5.b3': 'Tables in Excel and charts as images',
     'f6.tag': 'Farms, houses and flocks', 'f6.title': 'Your farm, organized the way you run it.',
     'f6.text': 'Each farm sets up its sections, houses and flocks, with the profile of each production line. A house under renovation is deactivated without losing its history, and every flock carries its genetic line from day one.',
     'f6.b1': 'Sections, houses and flocks per production line', 'f6.b2': 'Deactivating doesn’t delete: history is kept', 'f6.b3': 'Origin, hatchery and vaccination profile per line',
@@ -56,18 +56,21 @@
     'guide.kicker': 'User guide', 'guide.title': 'How it’s used, profile by profile.',
     'guide.text': 'What each access level sees, how to fill in every form field by field, what is stored in each table and what calculates itself. With screenshots of every screen. The guide is in Spanish.',
     'guide.cta': 'Read the guide (Spanish)',
-    'guide.l1': 'Administration', 'guide.l1t': 'Farms, accounts, lists, security and all the data.',
+    'guide.l1': 'Company administration', 'guide.l1t': 'All your farms, your accounts, each line’s plan and your billing.',
     'guide.l2': 'Farm manager', 'guide.l2t': 'Their farm, houses, flocks and each day’s record.',
     'guide.l3': 'Representative of several farms', 'guide.l3t': 'Each farm separately, with a single login.',
     'guide.l4': 'First sign-in', 'guide.l4t': 'The temporary password and their own.',
-    'ed.kicker': 'Editions', 'ed.title': 'Choose the edition that fits your farm.', 'ed.quote': 'Get a quote', 'ed.popular': 'Recommended',
-    'ed.e1': 'Essential', 'ed.e1for': 'To leave the notebook behind from day one.', 'ed.e1b1': 'Daily record for one production line', 'ed.e1b2': 'Dashboard with indicators and charts',
-    'ed.e1b3': 'Tables sortable A to Z and CSV download', 'ed.e1b4': 'Accounts for the administration and representatives',
-    'ed.e2': 'Professional', 'ed.e2for': 'For farms that want to measure everything.', 'ed.e2b1': 'Everything in Essential', 'ed.e2b2': 'All 4 lines: breeders, hatchery, broilers and layers',
-    'ed.e2b3': 'Sections, houses and flocks with their genetic line', 'ed.e2b4': 'Sample weighings and feed conversion', 'ed.e2b5': 'Heat stress with a heat map',
-    'ed.e3': 'Tailored', 'ed.e3for': 'For companies with several farms or their own rules.', 'ed.e3b1': 'Everything in Professional', 'ed.e3b2': 'Several farms and representatives',
-    'ed.e3b3': 'Fields and profiles made to measure', 'ed.e3b4': 'Migration of your current records', 'ed.e3b5': 'Training for your team',
-    'ed.note': 'No one-size-fits-all packages: the price depends on the scope, and you get it in writing before we start.',
+    'ed.kicker': 'Plans', 'ed.title': 'A plan for each line of your farm.', 'ed.quote': 'Choose plan', 'ed.popular': 'Recommended',
+    'ed.intro': 'Each production line of each farm picks its plan. The monthly price depends on the plan and on the live birds of that line; a line with no flocks or data in the month pays nothing.',
+    'ed.from': 'From', 'ed.month': 'per month',
+    'ed.e1': 'Basic', 'ed.e1for': 'To leave the notebook behind from day one.', 'ed.e1b1': 'General information, weight, feed, mortality and uniformity', 'ed.e1b2': 'Daily records, weighings, heat stress and feed purchases',
+    'ed.e1b3': 'Dashboard with indicators and charts', 'ed.e1b4': 'Excel download',
+    'ed.e2': 'Pro', 'ed.e2for': 'For farms that want to measure everything.', 'ed.e2b1': 'Everything in Basic', 'ed.e2b2': 'Serology by flock',
+    'ed.e2b3': 'Flock comparison', 'ed.e2b4': 'Excel upload and chart images', 'ed.e2b5': 'Profitability per kg of eggs or per chick and broiler, and regional benchmarks (coming soon)',
+    'ed.e3': 'Premium', 'ed.e3for': 'For companies with several farms that decide with data.', 'ed.e3b1': 'Everything in Pro', 'ed.e3b2': 'Integrated data analysis report (coming soon)',
+    'ed.all': 'Every plan includes the summary of all your farms, accounts for your team, the change log and access from your phone.',
+    'ed.tcap': 'Monthly price per production line, by its live birds (USD)', 'ed.tbirds': 'Live birds in the line', 'ed.tmore': 'Over 300,000', 'ed.tcustom': 'Tailored',
+    'ed.note': 'Billed every 30 days, itemized by farm and line. You can change plans anytime: you see the charge before confirming, and your data is never deleted.',
     'ind.kicker': 'Built for poultry', 'ind.title': 'From paper records to a farm that measures itself.',
     'ind.text': 'CHIIK was born from the forms farms already work with: each line’s origin profile, the production record, the genetic line’s weight table and the heat stress scale. The same fields, now on the phone of whoever is in the house and on the screen of whoever decides.',
     'ind.c1': 'Layer farms', 'ind.c2': 'Broiler farms', 'ind.c3': 'Hatcheries', 'ind.c4': 'Breeder farms', 'ind.c5': 'Companies with several farms', 'ind.c6': 'Technical advisors',
@@ -75,25 +78,25 @@
     'ind.a': 'With CHIIK', 'ind.a1': 'Every house records its day from a phone and the administration sees all farms right away.',
     'st.kicker': 'How to start', 'st.title': 'Three steps, with someone by your side.',
     'st.s1': 'Message us', 'st.s1t': 'Tell us how your farm keeps records today in a WhatsApp message. The first conversation is free.',
-    'st.s2': 'We set it up', 'st.s2t': 'We load your farms, lines, sections, houses and flocks. You get scope, price and timeline in writing.',
+    'st.s2': 'We set it up', 'st.s2t': 'We register your company and farms, and you choose each line’s plan seeing its price.',
     'st.s3': 'Your farm uses it', 'st.s3t': 'We train the administration and the farm managers, and support the first records.',
     'faq.kicker': 'FAQ', 'faq.title': 'What everyone asks.',
     'q1': 'Do we need to install anything?', 'a1': 'No. CHIIK runs in the browser on computers and phones. Everyone signs in with their email and password.',
     'q2': 'Who can see my farm’s data?', 'a2': 'Only the people the administration gave access to. Each representative sees only the farms assigned to them, one at a time. No one can create an account on their own, the session closes itself after 30 idle minutes and every change goes to the log with its author, time and reason.',
     'q3': 'Does it work on a phone, inside the house?', 'a3': 'Yes, fully: the farm manager records the day, weighs the sample and enters the temperature from their phone. An internet connection is needed to save.',
-    'q4': 'Does it work if I have several farms?', 'a4': 'Yes. The administration sees and compares every farm; each farm works separately with its own sections, houses and flocks, and a representative can have more than one.',
+    'q4': 'Does it work if I have several farms?', 'a4': 'Yes. Your company administration sees a summary of all your farms and compares them; each farm works separately with its own sections, houses and flocks, and a representative can have more than one.',
     'q5': 'Can I weigh in pounds and view in kilos?', 'a5': 'Yes. Each sample is weighed in grams, kilograms or pounds, depending on your scale, and everyone chooses which unit to view weights in. Feed is entered in quintals.',
-    'q6': 'Can we bring the records we already have?', 'a6': 'Yes. In the Tailored edition we move your current farms, flocks and records into CHIIK.',
-    'q7': 'How much does it cost?', 'a7': 'It depends on the edition and what needs adapting. Message us and in the first conversation we give you a price range, free of charge.',
+    'q6': 'Can we bring the records we already have?', 'a6': 'Yes. We move your current farms, flocks and records into CHIIK.',
+    'q7': 'How much does it cost?', 'a7': 'From US$ 15 per month per production line. The price depends on the plan and on the live birds of each line; see the plans table. Over 300,000 birds in a line: tailored.',
     'final.title': 'Let every house tell you how it’s doing.', 'final.text': 'Tell us how your farm keeps records today and we’ll show you CHIIK with your own lines and houses.',
     'ftr.by': 'A product of', 'ftr.rights': 'All rights reserved.', 'ftr.manual': 'User guide',
   };
   const TITLE = { es: 'CHIIK · Su granja avícola al día, nave por nave', en: 'CHIIK · Your poultry farm up to date, house by house' };
   const MSG = {
-    es: { def: '¡Hola! Vi CHIIK y me gustaría saber más para nuestra granja.', esencial: '¡Hola! Me interesa la versión Esencial de CHIIK para nuestra granja.',
-      profesional: '¡Hola! Me interesa la versión Profesional de CHIIK para nuestra granja.', medida: '¡Hola! Me interesa CHIIK a la medida de nuestra empresa avícola.' },
-    en: { def: 'Hi! I saw CHIIK and would like to know more for our farm.', esencial: 'Hi! I am interested in the CHIIK Essential edition for our farm.',
-      profesional: 'Hi! I am interested in the CHIIK Professional edition for our farm.', medida: 'Hi! I am interested in a tailored CHIIK for our poultry company.' },
+    es: { def: '¡Hola! Vi CHIIK y me gustaría saber más para nuestra granja.', basico: '¡Hola! Me interesa el plan Básico de CHIIK para nuestra granja.',
+      pro: '¡Hola! Me interesa el plan Pro de CHIIK para nuestra granja.', premium: '¡Hola! Me interesa el plan Premium de CHIIK para nuestra empresa avícola.' },
+    en: { def: 'Hi! I saw CHIIK and would like to know more for our farm.', basico: 'Hi! I am interested in the CHIIK Basic plan for our farm.',
+      pro: 'Hi! I am interested in the CHIIK Pro plan for our farm.', premium: 'Hi! I am interested in the CHIIK Premium plan for our poultry company.' },
   };
 
   // Guardar el español original para poder volver a él sin recargar

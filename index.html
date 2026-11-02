@@ -19,9 +19,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/landing.css?v=202610290">
-<script src="js/frame-guard.js?v=202610290"></script>
-<script src="js/landing.js?v=202610290" defer></script>
+<link rel="stylesheet" href="css/landing.css?v=202611030">
+<script src="js/frame-guard.js?v=202611030"></script>
+<script src="js/landing.js?v=202611030" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
@@ -146,7 +146,7 @@
         <span class="tag" data-i18n="f5.tag">Dashboard</span>
         <h3 data-i18n="f5.title">Toda la producción, de un vistazo.</h3>
         <p data-i18n="f5.text">Indicadores, medidores y gráficos por línea de producción, con filtros por granja, sector, nave y fechas, por día, semana o mes. Compare granjas o naves entre sí, ordene cada tabla de la A a la Z y descargue los datos o los gráficos.</p>
-        <ul class="ticks"><li data-i18n="f5.b1">Comparativo por granja o por nave</li><li data-i18n="f5.b2">Real contra tabla en cada gráfico</li><li data-i18n="f5.b3">Tablas en CSV y gráficos en imagen</li></ul>
+        <ul class="ticks"><li data-i18n="f5.b1">Comparativo por granja, por nave o entre lotes</li><li data-i18n="f5.b2">Real contra tabla en cada gráfico</li><li data-i18n="f5.b3">Tablas en Excel y gráficos en imagen</li></ul>
       </div>
     </article>
 
@@ -227,7 +227,7 @@
       <p><a class="btn" href="manual.html" data-i18n="guide.cta">Leer el manual</a></p>
     </div>
     <ul class="guide-list reveal">
-      <li><b data-i18n="guide.l1">Administración</b><span data-i18n="guide.l1t">Granjas, cuentas, listas, seguridad y todos los datos.</span></li>
+      <li><b data-i18n="guide.l1">Administración de la empresa</b><span data-i18n="guide.l1t">Todas sus granjas, sus cuentas, el plan de cada línea y sus cobros.</span></li>
       <li><b data-i18n="guide.l2">Encargado de granja</b><span data-i18n="guide.l2t">Su granja, sus naves, sus lotes y el registro de cada día.</span></li>
       <li><b data-i18n="guide.l3">Representante de varias granjas</b><span data-i18n="guide.l3t">Cada granja por separado, con un solo acceso.</span></li>
       <li><b data-i18n="guide.l4">Primer ingreso</b><span data-i18n="guide.l4t">La contraseña temporal y la propia.</span></li>
@@ -235,33 +235,53 @@
   </div>
 </section>
 
-<!-- ═════ VERSIONES ═════ -->
+<!-- ═════ PLANES ═════ -->
 <section class="editions" id="versiones" aria-labelledby="ed-t">
   <div class="wrap">
-    <p class="kicker" data-i18n="ed.kicker">Versiones</p>
-    <h2 class="h2" id="ed-t" data-i18n="ed.title">Elija la versión que va con su granja.</h2>
+    <p class="kicker" data-i18n="ed.kicker">Planes</p>
+    <h2 class="h2" id="ed-t" data-i18n="ed.title">Un plan para cada línea de su granja.</h2>
+    <p class="ed-intro" data-i18n="ed.intro">Cada línea de producción de cada granja elige su plan. El precio al mes depende del plan y de las aves vivas de esa línea; una línea sin lotes ni datos en el mes no paga.</p>
     <div class="ed-grid">
       <article class="ed reveal">
-        <h3 data-i18n="ed.e1">Esencial</h3>
+        <h3 data-i18n="ed.e1">Básico</h3>
+        <p class="ed-price"><span data-i18n="ed.from">Desde</span> <b>US$ 15</b> <span data-i18n="ed.month">al mes</span></p>
         <p class="ed-for" data-i18n="ed.e1for">Para dejar el cuaderno desde el primer día.</p>
-        <ul class="ticks"><li data-i18n="ed.e1b1">Registro diario de una línea de producción</li><li data-i18n="ed.e1b2">Dashboard con indicadores y gráficos</li><li data-i18n="ed.e1b3">Tablas ordenables de la A a la Z y descarga en CSV</li><li data-i18n="ed.e1b4">Cuentas para la administración y los representantes</li></ul>
-        <a class="btn ghost" data-wa="esencial" href="https://wa.me/50258253416" target="_blank" rel="noopener" data-i18n="ed.quote">Cotizar</a>
+        <ul class="ticks"><li data-i18n="ed.e1b1">Información general, peso, consumo, mortalidad y uniformidad</li><li data-i18n="ed.e1b2">Registros, pesajes, estrés calórico y concentrado</li><li data-i18n="ed.e1b3">Dashboard con indicadores y gráficos</li><li data-i18n="ed.e1b4">Descarga en Excel</li></ul>
+        <a class="btn ghost" data-wa="basico" href="https://wa.me/50258253416" target="_blank" rel="noopener" data-i18n="ed.quote">Elegir plan</a>
       </article>
       <article class="ed best reveal">
-        <span class="badge" data-i18n="ed.popular">Recomendada</span>
-        <h3 data-i18n="ed.e2">Profesional</h3>
+        <span class="badge" data-i18n="ed.popular">Recomendado</span>
+        <h3 data-i18n="ed.e2">Pro</h3>
+        <p class="ed-price"><span data-i18n="ed.from">Desde</span> <b>US$ 20</b> <span data-i18n="ed.month">al mes</span></p>
         <p class="ed-for" data-i18n="ed.e2for">Para granjas que quieren medirlo todo.</p>
-        <ul class="ticks"><li data-i18n="ed.e2b1">Todo lo de Esencial</li><li data-i18n="ed.e2b2">Las 4 líneas: reproductora, incubadora, engorde y postura</li><li data-i18n="ed.e2b3">Sectores, naves y lotes con su línea genética</li><li data-i18n="ed.e2b4">Pesajes por muestra y conversión alimenticia</li><li data-i18n="ed.e2b5">Estrés calórico con mapa de calor</li></ul>
-        <a class="btn amber" data-wa="profesional" href="https://wa.me/50258253416" target="_blank" rel="noopener" data-i18n="ed.quote">Cotizar</a>
+        <ul class="ticks"><li data-i18n="ed.e2b1">Todo lo de Básico</li><li data-i18n="ed.e2b2">Serología por lote</li><li data-i18n="ed.e2b3">Comparativo de lotes</li><li data-i18n="ed.e2b4">Carga desde Excel e imágenes de los gráficos</li><li data-i18n="ed.e2b5">Rentabilidad por kg de huevo o por pollito y pollo, y benchmarks regionales (próximamente)</li></ul>
+        <a class="btn amber" data-wa="pro" href="https://wa.me/50258253416" target="_blank" rel="noopener" data-i18n="ed.quote">Elegir plan</a>
       </article>
       <article class="ed reveal">
-        <h3 data-i18n="ed.e3">A la medida</h3>
-        <p class="ed-for" data-i18n="ed.e3for">Para empresas con varias granjas o reglas propias.</p>
-        <ul class="ticks"><li data-i18n="ed.e3b1">Todo lo de Profesional</li><li data-i18n="ed.e3b2">Varias granjas y representantes</li><li data-i18n="ed.e3b3">Campos y fichas a su medida</li><li data-i18n="ed.e3b4">Migración de sus registros actuales</li><li data-i18n="ed.e3b5">Capacitación para su equipo</li></ul>
-        <a class="btn ghost" data-wa="medida" href="https://wa.me/50258253416" target="_blank" rel="noopener" data-i18n="ed.quote">Cotizar</a>
+        <h3 data-i18n="ed.e3">Premium</h3>
+        <p class="ed-price"><span data-i18n="ed.from">Desde</span> <b>US$ 25</b> <span data-i18n="ed.month">al mes</span></p>
+        <p class="ed-for" data-i18n="ed.e3for">Para empresas con varias granjas que deciden con datos.</p>
+        <ul class="ticks"><li data-i18n="ed.e3b1">Todo lo de Pro</li><li data-i18n="ed.e3b2">Reporte de análisis de datos integrado (próximamente)</li></ul>
+        <a class="btn ghost" data-wa="premium" href="https://wa.me/50258253416" target="_blank" rel="noopener" data-i18n="ed.quote">Elegir plan</a>
       </article>
     </div>
-    <p class="ed-note" data-i18n="ed.note">Sin paquetes genéricos: el precio depende del alcance y lo recibe por escrito antes de empezar.</p>
+    <div class="precios-wrap reveal">
+      <table class="precios">
+        <caption data-i18n="ed.tcap">Precio al mes por línea de producción, según sus aves vivas (USD)</caption>
+        <thead><tr><th data-i18n="ed.tbirds">Aves vivas de la línea</th><th>Básico</th><th>Pro</th><th>Premium</th></tr></thead>
+        <tbody>
+          <tr><td>0–999</td><td>US$ 15</td><td>US$ 20</td><td>US$ 25</td></tr>
+          <tr><td>1,000–9,999</td><td>US$ 25</td><td>US$ 30</td><td>US$ 35</td></tr>
+          <tr><td>10,000–29,999</td><td>US$ 30</td><td>US$ 35</td><td>US$ 40</td></tr>
+          <tr><td>30,000–74,999</td><td>US$ 35</td><td>US$ 40</td><td>US$ 45</td></tr>
+          <tr><td>75,000–149,999</td><td>US$ 45</td><td>US$ 50</td><td>US$ 55</td></tr>
+          <tr><td>150,000–300,000</td><td>US$ 55</td><td>US$ 60</td><td>US$ 65</td></tr>
+          <tr><td data-i18n="ed.tmore">Más de 300,000</td><td colspan="3" data-i18n="ed.tcustom">A la medida</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ed-note" data-i18n="ed.all">Todos los planes incluyen el resumen de todas sus granjas, cuentas para su equipo, la bitácora de cambios y el acceso desde el celular.</p>
+    <p class="ed-note" data-i18n="ed.note">Se cobra cada 30 días, con el detalle por granja y línea. Puede cambiar de plan cuando quiera: verá el cargo antes de confirmar y sus datos nunca se borran.</p>
   </div>
 </section>
 
@@ -288,7 +308,7 @@
     <h2 class="h2" id="st-t" data-i18n="st.title">En tres pasos, con alguien que lo acompaña.</h2>
     <ol class="step-grid">
       <li class="reveal"><b>1</b><h3 data-i18n="st.s1">Nos escribe</h3><p data-i18n="st.s1t">Nos cuenta cómo registra hoy su granja en un mensaje de WhatsApp. La primera conversación no tiene costo.</p></li>
-      <li class="reveal"><b>2</b><h3 data-i18n="st.s2">Lo preparamos</h3><p data-i18n="st.s2t">Cargamos sus granjas, líneas, sectores, naves y lotes. Recibe el alcance, el precio y los plazos por escrito.</p></li>
+      <li class="reveal"><b>2</b><h3 data-i18n="st.s2">Lo preparamos</h3><p data-i18n="st.s2t">Damos de alta su empresa y sus granjas, y usted elige el plan de cada línea viendo su precio.</p></li>
       <li class="reveal"><b>3</b><h3 data-i18n="st.s3">Su granja lo usa</h3><p data-i18n="st.s3t">Capacitamos a la administración y a los encargados, y acompañamos los primeros registros.</p></li>
     </ol>
   </div>
@@ -305,10 +325,10 @@
       <details><summary data-i18n="q1">¿Hay que instalar algo?</summary><p data-i18n="a1">No. CHIIK funciona en el navegador de la computadora y del celular. Cada persona entra con su correo y su contraseña.</p></details>
       <details><summary data-i18n="q2">¿Quién puede ver los datos de mi granja?</summary><p data-i18n="a2">Solo las personas a las que la administración les dio acceso. Cada representante ve únicamente las granjas que tiene asignadas, una a la vez. Nadie puede crearse una cuenta por su cuenta, la sesión se cierra sola tras 30 minutos sin uso y cada cambio queda en la bitácora con su autor, su hora y su motivo.</p></details>
       <details><summary data-i18n="q3">¿Funciona en el celular, dentro de la nave?</summary><p data-i18n="a3">Sí, al cien por ciento: el encargado registra el día, pesa la muestra y anota la temperatura desde su teléfono. Necesita conexión a internet para guardar.</p></details>
-      <details><summary data-i18n="q4">¿Sirve si tengo varias granjas?</summary><p data-i18n="a4">Sí. La administración ve y compara todas las granjas; cada granja trabaja por separado con sus propios sectores, naves y lotes, y un representante puede tener más de una.</p></details>
+      <details><summary data-i18n="q4">¿Sirve si tengo varias granjas?</summary><p data-i18n="a4">Sí. La administración de la empresa ve el resumen de todas sus granjas y las compara; cada granja trabaja por separado con sus propios sectores, naves y lotes, y un representante puede tener más de una.</p></details>
       <details><summary data-i18n="q5">¿Puedo pesar en libras y ver en kilos?</summary><p data-i18n="a5">Sí. Cada muestra se pesa en gramos, kilogramos o libras, según su balanza, y cada quien elige en qué unidad ver los pesos. El alimento se anota en quintales.</p></details>
-      <details><summary data-i18n="q6">¿Podemos pasar los registros que ya tenemos?</summary><p data-i18n="a6">Sí. En la versión A la medida pasamos a CHIIK sus granjas, lotes y registros actuales.</p></details>
-      <details><summary data-i18n="q7">¿Cuánto cuesta?</summary><p data-i18n="a7">Depende de la versión y de lo que haya que adaptar. Escríbanos y en la primera conversación le damos un rango de precio, sin costo.</p></details>
+      <details><summary data-i18n="q6">¿Podemos pasar los registros que ya tenemos?</summary><p data-i18n="a6">Sí. Pasamos a CHIIK sus granjas, lotes y registros actuales.</p></details>
+      <details><summary data-i18n="q7">¿Cuánto cuesta?</summary><p data-i18n="a7">Desde US$ 15 al mes por línea de producción. El precio depende del plan y de las aves vivas de cada línea; vea la tabla de planes. Más de 300,000 aves en una línea: a la medida.</p></details>
     </div>
   </div>
 </section>
