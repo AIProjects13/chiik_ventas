@@ -654,3 +654,20 @@ details.ficha[open] > summary .icon:last-child { transform: rotate(180deg); }
 
 .progreso { height: 10px; border-radius: 999px; background: var(--info-bg); overflow: hidden; margin: var(--s2) auto 0; max-width: 520px; }
 .progreso > span { display: block; height: 100%; background: var(--primary); transition: width .3s ease; }
+
+
+.fila-grupo th { text-align: left; background: var(--surface-2); font-weight: 700; padding-top: 14px; }
+.fila-subtotal td { font-weight: 700; border-top: 1px solid var(--line); }
+
+
+.lote-naves { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: var(--s2, 8px); margin: 6px 0; }
+.lote-nave { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: var(--r-sm); box-shadow: var(--inset-sm); min-width: 0; }
+.lote-nave .check { flex: 1 1 auto; min-width: 0; }
+.lote-nave input[type="number"] { width: 96px; flex: 0 0 auto; }
+
+
+.humano { display: flex; justify-content: center; min-height: 65px; }
+
+
+.firma { margin: 0; font-size: 0.72rem; line-height: 1.35; text-align: center; color: var(--muted); }
+.sidebar .firma { color: inherit; opacity: 0.75; }

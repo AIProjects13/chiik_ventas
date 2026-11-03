@@ -219,6 +219,7 @@ h1{font-size:clamp(42px,5.4vw,70px);margin:22px 0 22px;max-width:14ch}
 .pixan small{display:block;color:var(--muted);font-size:12px;line-height:1.2}
 .pixan b{font-family:'Sora','Inter',sans-serif;letter-spacing:.08em;font-size:15px}
 .copy{width:100%;color:var(--muted);font-size:14px}
+.firma{width:100%;margin:0;color:var(--muted);font-size:12px;line-height:1.4}
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:50;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transition:transform .2s var(--ease)}
 .wa-float:hover{transform:scale(1.08)}
 .wa-float svg{width:32px;height:32px;fill:#fff}

@@ -4,7 +4,7 @@
   const WA = '50258253416';
   // Idiomas con juego de capturas propio; los demás usan las capturas en español.
   const SHOT_LANGS = ['es'];
-  const SHOTS_V = '202611030';   // súbelo al regenerar las capturas
+  const SHOTS_V = '202611041';   // súbelo al regenerar las capturas
 
   // ── Textos en inglés (el español está escrito en el HTML)
   const EN = {
@@ -61,7 +61,7 @@
     'guide.l3': 'Representative of several farms', 'guide.l3t': 'Each farm separately, with a single login.',
     'guide.l4': 'First sign-in', 'guide.l4t': 'The temporary password and their own.',
     'ed.kicker': 'Plans', 'ed.title': 'A plan for each line of your farm.', 'ed.quote': 'Choose plan', 'ed.popular': 'Recommended',
-    'ed.intro': 'Each production line of each farm picks its plan. The monthly price depends on the plan and on the live birds of that line; a line with no flocks or data in the month pays nothing.',
+    'ed.intro': 'Each production line of each farm picks its plan and its bird tier. It pays the fixed price of that tier every month, even with fewer birds, and the tier is its cap of live birds. Several companies, one single bill.',
     'ed.from': 'From', 'ed.month': 'per month',
     'ed.e1': 'Basic', 'ed.e1for': 'To leave the notebook behind from day one.', 'ed.e1b1': 'General information, weight, feed, mortality and uniformity', 'ed.e1b2': 'Daily records, weighings, heat stress and feed purchases',
     'ed.e1b3': 'Dashboard with indicators and charts', 'ed.e1b4': 'Excel download',
@@ -69,7 +69,7 @@
     'ed.e2b3': 'Flock comparison', 'ed.e2b4': 'Excel upload and chart images', 'ed.e2b5': 'Profitability per kg of eggs or per chick and broiler, and regional benchmarks (coming soon)',
     'ed.e3': 'Premium', 'ed.e3for': 'For companies with several farms that decide with data.', 'ed.e3b1': 'Everything in Pro', 'ed.e3b2': 'Integrated data analysis report (coming soon)',
     'ed.all': 'Every plan includes the summary of all your farms, accounts for your team, the change log and access from your phone.',
-    'ed.tcap': 'Monthly price per production line, by its live birds (USD)', 'ed.tbirds': 'Live birds in the line', 'ed.tmore': 'Over 300,000', 'ed.tcustom': 'Tailored',
+    'ed.tcap': 'Monthly price per production line, by its bird tier (USD)', 'ed.tbirds': 'Bird tier of the line', 'ed.tmore': 'Over 300,000', 'ed.tcustom': 'Tailored',
     'ed.note': 'Billed every 30 days, itemized by farm and line. You can change plans anytime: you see the charge before confirming, and your data is never deleted.',
     'ind.kicker': 'Built for poultry', 'ind.title': 'From paper records to a farm that measures itself.',
     'ind.text': 'CHIIK was born from the forms farms already work with: each line’s origin profile, the production record, the genetic line’s weight table and the heat stress scale. The same fields, now on the phone of whoever is in the house and on the screen of whoever decides.',
@@ -78,7 +78,7 @@
     'ind.a': 'With CHIIK', 'ind.a1': 'Every house records its day from a phone and the administration sees all farms right away.',
     'st.kicker': 'How to start', 'st.title': 'Three steps, with someone by your side.',
     'st.s1': 'Message us', 'st.s1t': 'Tell us how your farm keeps records today in a WhatsApp message. The first conversation is free.',
-    'st.s2': 'We set it up', 'st.s2t': 'We register your company and farms, and you choose each line’s plan seeing its price.',
+    'st.s2': 'We set it up', 'st.s2t': 'We register your company; you create your farms and choose each line’s plan and tier seeing its price.',
     'st.s3': 'Your farm uses it', 'st.s3t': 'We train the administration and the farm managers, and support the first records.',
     'faq.kicker': 'FAQ', 'faq.title': 'What everyone asks.',
     'q1': 'Do we need to install anything?', 'a1': 'No. CHIIK runs in the browser on computers and phones. Everyone signs in with their email and password.',
@@ -87,9 +87,9 @@
     'q4': 'Does it work if I have several farms?', 'a4': 'Yes. Your company administration sees a summary of all your farms and compares them; each farm works separately with its own sections, houses and flocks, and a representative can have more than one.',
     'q5': 'Can I weigh in pounds and view in kilos?', 'a5': 'Yes. Each sample is weighed in grams, kilograms or pounds, depending on your scale, and everyone chooses which unit to view weights in. Feed is entered in quintals.',
     'q6': 'Can we bring the records we already have?', 'a6': 'Yes. We move your current farms, flocks and records into CHIIK.',
-    'q7': 'How much does it cost?', 'a7': 'From US$ 15 per month per production line. The price depends on the plan and on the live birds of each line; see the plans table. Over 300,000 birds in a line: tailored.',
+    'q7': 'How much does it cost?', 'a7': 'From US$ 15 per month per production line. The price depends on the plan and on the bird tier you choose for each line; see the plans table. Over 300,000 birds in a line: tailored.',
     'final.title': 'Let every house tell you how it’s doing.', 'final.text': 'Tell us how your farm keeps records today and we’ll show you CHIIK with your own lines and houses.',
-    'ftr.by': 'A product of', 'ftr.rights': 'All rights reserved.', 'ftr.manual': 'User guide',
+    'ftr.by': 'A product of', 'ftr.rights': 'All rights reserved.', 'ftr.firma': 'by Fernando Gaitán', 'ftr.manual': 'User guide',
   };
   const TITLE = { es: 'CHIIK · Su granja avícola al día, nave por nave', en: 'CHIIK · Your poultry farm up to date, house by house' };
   const MSG = {

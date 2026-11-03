@@ -19,9 +19,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Sora:wght@600;700&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/landing.css?v=202611030">
-<script src="js/frame-guard.js?v=202611030"></script>
-<script src="js/landing.js?v=202611030" defer></script>
+<link rel="stylesheet" href="css/landing.css?v=202611041">
+<script src="js/frame-guard.js?v=202611041"></script>
+<script src="js/landing.js?v=202611041" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
@@ -240,7 +240,7 @@
   <div class="wrap">
     <p class="kicker" data-i18n="ed.kicker">Planes</p>
     <h2 class="h2" id="ed-t" data-i18n="ed.title">Un plan para cada línea de su granja.</h2>
-    <p class="ed-intro" data-i18n="ed.intro">Cada línea de producción de cada granja elige su plan. El precio al mes depende del plan y de las aves vivas de esa línea; una línea sin lotes ni datos en el mes no paga.</p>
+    <p class="ed-intro" data-i18n="ed.intro">Cada línea de producción de cada granja elige su plan y su tramo de aves. Paga el precio fijo de ese tramo cada mes, aunque tenga menos aves, y el tramo es su tope de aves vivas. Con varias empresas, un solo cobro.</p>
     <div class="ed-grid">
       <article class="ed reveal">
         <h3 data-i18n="ed.e1">Básico</h3>
@@ -267,8 +267,8 @@
     </div>
     <div class="precios-wrap reveal">
       <table class="precios">
-        <caption data-i18n="ed.tcap">Precio al mes por línea de producción, según sus aves vivas (USD)</caption>
-        <thead><tr><th data-i18n="ed.tbirds">Aves vivas de la línea</th><th>Básico</th><th>Pro</th><th>Premium</th></tr></thead>
+        <caption data-i18n="ed.tcap">Precio al mes por línea de producción, según su tramo de aves (USD)</caption>
+        <thead><tr><th data-i18n="ed.tbirds">Tramo de aves de la línea</th><th>Básico</th><th>Pro</th><th>Premium</th></tr></thead>
         <tbody>
           <tr><td>0–999</td><td>US$ 15</td><td>US$ 20</td><td>US$ 25</td></tr>
           <tr><td>1,000–9,999</td><td>US$ 25</td><td>US$ 30</td><td>US$ 35</td></tr>
@@ -308,7 +308,7 @@
     <h2 class="h2" id="st-t" data-i18n="st.title">En tres pasos, con alguien que lo acompaña.</h2>
     <ol class="step-grid">
       <li class="reveal"><b>1</b><h3 data-i18n="st.s1">Nos escribe</h3><p data-i18n="st.s1t">Nos cuenta cómo registra hoy su granja en un mensaje de WhatsApp. La primera conversación no tiene costo.</p></li>
-      <li class="reveal"><b>2</b><h3 data-i18n="st.s2">Lo preparamos</h3><p data-i18n="st.s2t">Damos de alta su empresa y sus granjas, y usted elige el plan de cada línea viendo su precio.</p></li>
+      <li class="reveal"><b>2</b><h3 data-i18n="st.s2">Lo preparamos</h3><p data-i18n="st.s2t">Damos de alta su empresa; usted crea sus granjas y elige el plan y el tramo de cada línea viendo su precio.</p></li>
       <li class="reveal"><b>3</b><h3 data-i18n="st.s3">Su granja lo usa</h3><p data-i18n="st.s3t">Capacitamos a la administración y a los encargados, y acompañamos los primeros registros.</p></li>
     </ol>
   </div>
@@ -328,7 +328,7 @@
       <details><summary data-i18n="q4">¿Sirve si tengo varias granjas?</summary><p data-i18n="a4">Sí. La administración de la empresa ve el resumen de todas sus granjas y las compara; cada granja trabaja por separado con sus propios sectores, naves y lotes, y un representante puede tener más de una.</p></details>
       <details><summary data-i18n="q5">¿Puedo pesar en libras y ver en kilos?</summary><p data-i18n="a5">Sí. Cada muestra se pesa en gramos, kilogramos o libras, según su balanza, y cada quien elige en qué unidad ver los pesos. El alimento se anota en quintales.</p></details>
       <details><summary data-i18n="q6">¿Podemos pasar los registros que ya tenemos?</summary><p data-i18n="a6">Sí. Pasamos a CHIIK sus granjas, lotes y registros actuales.</p></details>
-      <details><summary data-i18n="q7">¿Cuánto cuesta?</summary><p data-i18n="a7">Desde US$ 15 al mes por línea de producción. El precio depende del plan y de las aves vivas de cada línea; vea la tabla de planes. Más de 300,000 aves en una línea: a la medida.</p></details>
+      <details><summary data-i18n="q7">¿Cuánto cuesta?</summary><p data-i18n="a7">Desde US$ 15 al mes por línea de producción. El precio depende del plan y del tramo de aves que elija para cada línea; vea la tabla de planes. Más de 300,000 aves en una línea: a la medida.</p></details>
     </div>
   </div>
 </section>
@@ -353,6 +353,7 @@
       <span><small data-i18n="ftr.by">Un producto de</small><b>PIXAN TECH</b></span>
     </a>
     <p class="copy">© <span id="year">2026</span> Pixan Tech · <span data-i18n="ftr.rights">Todos los derechos reservados.</span></p>
+    <p class="firma">Powered by Pixan Tech<br><span data-i18n="ftr.firma">por Fernando Gaitán</span></p>
   </div>
 </footer>
 <a class="wa-float" data-wa="float" href="https://wa.me/50258253416" target="_blank" rel="noopener" aria-label="WhatsApp">
