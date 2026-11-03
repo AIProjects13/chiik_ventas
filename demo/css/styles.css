@@ -671,3 +671,17 @@ details.ficha[open] > summary .icon:last-child { transform: rotate(180deg); }
 
 .firma { margin: 0; font-size: 0.72rem; line-height: 1.35; text-align: center; color: var(--muted); }
 .sidebar .firma { color: inherit; opacity: 0.75; }
+
+
+.field input[type="date"], .field input[type="time"], .field input[type="datetime-local"], .field input[type="month"] {
+    -webkit-appearance: none; appearance: none; display: block; width: 100%; min-width: 0; max-width: 100%; text-align: left;
+}
+.field input::-webkit-date-and-time-value { text-align: left; min-height: 1.5em; }
+.field input, .field select, .field textarea, .dropdown > summary { max-width: 100%; }
+.date-range { min-width: 0; max-width: 100%; }
+
+@media (max-width: 399px) {
+    .modal .form-grid { grid-template-columns: minmax(0, 1fr); }
+    .date-range { flex-direction: column; align-items: stretch; }
+    .date-range .field { flex: 0 0 auto; width: 100%; }
+}
