@@ -17,11 +17,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css?v=202611031453">
-    <link rel="stylesheet" href="css/demo.css?v=202611031453">
-    <script src="js/demo.js?v=202611031453" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=202611090520">
+    <link rel="stylesheet" href="css/demo.css?v=202611090520">
+    <script src="js/demo.js?v=202611090520" defer></script>
     
-    <script type="module" src="js/app.js?v=202611031453"></script>
+    <script type="module" src="js/app.js?v=202611090520"></script>
 </head>
 
 <body>
@@ -49,8 +49,12 @@
             <img class="brand-logo" src="../img/marca/chiik-logo-claro.svg" alt="CHIIK" width="398" height="132">
             <span class="brand-tag">Registro avícola</span>
         </div>
-        <div class="spinner" aria-hidden="true"></div>
+        <div class="carga">
+            <div class="carga-barra" id="carga-barra" role="progressbar" aria-label="Cargando" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="carga-relleno"></span></div>
+            <span id="carga-pct" class="carga-pct">0 %</span>
+        </div>
         <p id="loading-text" class="muted">Cargando…</p>
+        <aside id="consejo" class="consejo" hidden><strong>Buena práctica</strong><p id="consejo-texto"></p></aside>
     </div>
 
     
